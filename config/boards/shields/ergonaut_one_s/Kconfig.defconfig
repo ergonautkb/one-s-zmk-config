@@ -1,17 +1,17 @@
 # Copyright (c) 2020 The ZMK Contributors
 # SPDX-License-Identifier: MIT
 
-if SHIELD_ERGONAUT_ONE_LEFT
+if SHIELD_ERGONAUT_ONE_S_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Ergonaut One"
+	default "Ergonaut One S"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
 
 endif
 
-if SHIELD_ERGONAUT_ONE_LEFT || SHIELD_ERGONAUT_ONE_RIGHT
+if SHIELD_ERGONAUT_ONE_S_LEFT || SHIELD_ERGONAUT_ONE_S_RIGHT
 
 config ZMK_SPLIT
 	default y

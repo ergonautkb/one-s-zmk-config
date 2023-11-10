@@ -4,11 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "ergonaut_one.dtsi"
-
-&default_transform {
-    col-offset = <6>;
-};
+#include "ergonaut_one_s.dtsi"
 
 &kscan0 {
     col-gpios

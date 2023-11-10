@@ -1,0 +1,8 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+config SHIELD_ERGONAUT_ONE_S_LEFT
+    def_bool $(shields_list_contains,ergonaut_one_s_left)
+
+config SHIELD_ERGONAUT_ONE_S_RIGHT
+    def_bool $(shields_list_contains,ergonaut_one_s_right)
