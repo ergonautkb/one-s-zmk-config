@@ -11,7 +11,6 @@
 #define SYM 5
 #define FUN 6
 #define ADJ 7
-#define MEGAFN 8
 
 / {
         behaviors {
@@ -23,58 +22,6 @@
                         quick_tap_ms = <0>;
                         flavor = "balanced";
                         bindings = <&kp>, <&kp>;
-                };
-        };
-
-        combos {
-                compatible = "zmk,combos";
-                combo_prev {
-                    timeout-ms = <50>;
-                    key-positions = <7 17>;
-                    layers = <NAV>;
-                    bindings = <&kp LG(LS(LBRC))>;
-                };
-
-                combo_next {
-                    timeout-ms = <50>;
-                    key-positions = <8 18>;
-                    layers = <NAV>;
-                    bindings = <&kp LG(LS(RBRC))>;
-                };
-                
-                combo_left_sqrbrkt {
-                    timeout-ms = <50>;
-                    key-positions = <0 10>;
-                    layers = <BASE>;
-                    bindings = <&kp LBKT>;
-                };
-
-                combo_right_sqrbrkt {
-                    timeout-ms = <50>;
-                    key-positions = <4 14>;
-                    layers = <BASE>;
-                    bindings = <&kp RBKT>;
-                };
-
-                combo_lang_eng {
-                    timeout-ms = <50>;
-                    key-positions = <27 34>;
-                    layers = <BASE>;
-                    bindings = <&kp LG(F17)>;
-                };
-
-                combo_lang_ru {
-                    timeout-ms = <50>;
-                    key-positions = <26 34>;
-                    layers = <BASE>;
-                    bindings = <&kp LG(F16)>;
-                };
-
-                combo_lang_pl {
-                    timeout-ms = <50>;
-                    key-positions = <25 34>;
-                    layers = <BASE>;
-                    bindings = <&kp LG(F13)>;
                 };
         };
 
@@ -92,10 +39,10 @@
 
                 nav_layer {
                         bindings = <
-   &none     &none         &none          &none          &none             &kp LC(LG(Z))  &kp LG(V)   &kp LG(C)    &kp LG(X)   &kp LG(Z)
+   &none     &none         &none          &none          &none             &none          &kp LG(V)   &kp LG(C)    &kp LG(X)   &kp LG(Z)
    &kp LGUI  &kp LALT      &kp LCTRL      &kp LSHFT      &none             &kp CAPS       &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT
    &none     &none         &none          &none          &none             &kp INS        &kp HOME    &kp PG_DN    &kp PG_UP   &kp END
-                           &none          &none          &none             &kp RET        &lt MEGAFN BSPC    &kp DEL
+                           &none          &none          &none             &kp RET        &kp BSPC    &kp DEL
                         >;
                 };
 
@@ -111,7 +58,7 @@
                 media_layer {
                         bindings = <
    &none       &none       &none          &none          &none             &kp LG(LS(N4))    &none         &kp C_BRI_DN  &kp C_BRI_UP  &none
-   &kp LGUI    &kp LALT    &kp LCTRL      &kp LSHFT      &none             &kp LG(LA(BSLH))  &kp LSHFT     &kp C_VOL_DN  &kp C_VOL_UP  &kp LGUI
+   &kp LGUI    &kp LALT    &kp LCTRL      &kp LSHFT      &none             &none             &kp LSHFT     &kp C_VOL_DN  &kp C_VOL_UP  &kp LGUI
    &none       &none       &none          &none          &none             &none             &none         &none         &none         &none
                            &none          &none          &mo ADJ           &kp C_STOP        &kp C_PP      &kp K_MUTE
                         >;
@@ -122,7 +69,7 @@
    &kp LBKT    &kp N7      &kp N8         &kp N9         &kp RBKT          &none        &none         &none        &none       &none
    &kp SQT     &kp N4      &kp N5         &kp N6         &kp EQUAL         &none        &kp LSHFT     &kp LCTRL    &kp LALT    &kp LGUI
    &kp GRAVE   &kp N1      &kp N2         &kp N3         &kp BSLH          &none        &none         &none        &none       &none
-                           &kp DOT        &lt MEGAFN N0         &kp MINUS         &none        &none         &none
+                           &kp DOT        &lt N0         &kp MINUS         &none        &none         &none
                         >;
                 };
 
@@ -146,19 +93,10 @@
 
                 adj_layer {
                         bindings = <
-   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4  &none        &none       &none   &none   &none
-   &bt BT_CLR    &bt BT_PRV    &bt BT_NXT    &sys_reset   &bootloader   &bootloader  &sys_reset  &none   &none   &none
-   &out OUT_TOG  &out OUT_BLE  &out OUT_USB  &none        &none         &none        &none       &none   &none   &none
-                               &none         &none        &none         &none        &none       &none
-                        >;
-                };
-                
-                mega_fn_layer {
-                        bindings = <
-   &kp F13  &kp F16  &kp F17  &kp F18  &kp F19    &kp LS(F13)  &kp LS(F16)  &kp LS(F17)  &kp LS(F18)  &kp LS(F19)
-   &kp LC(F13)  &kp LC(F16)  &kp LC(F17)  &kp LC(F18)  &kp LC(F19)    &kp LC(LS(F13))  &kp LC(LS(F16))  &kp LC(LS(F17))  &kp LC(LS(F18))  &kp LC(LS(F19))
-   &kp LA(F13)  &kp LA(F16)  &kp LA(F17)  &kp LA(F18)  &kp LA(F19)    &kp LA(LS(F13))  &kp LA(LS(F16))  &kp LA(LS(F17))  &kp LA(LS(F18))  &kp LA(LS(F19))
-                               &none         &none        &none         &none        &none   &none
+   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1 &bt BT_SEL 0
+   &bt BT_CLR    &bt BT_PRV    &bt BT_NXT    &sys_reset   &bootloader   &bootloader   &sys_reset    &bt BT_NXT    &bt BT_PRV   &bt BT_CLR
+   &out OUT_TOG  &out OUT_BLE  &out OUT_USB  &none        &none         &none         &none         &out OUT_USB  &out OUT_BLE &out OUT_TOG
+                               &none         &none        &none         &none         &none       &none
                         >;
                 };
         };
