@@ -1,12 +1,12 @@
-# ZMK Firmware for Ergonaut One keyboard
+# ZMK Firmware for Ergonaut One S keyboard
 
-This is a repository for a ZMK Firmware for Ergonaut One keyboard.
+This is a repository for a ZMK Firmware for Ergonaut One S keyboard.
 
 ## Default keymap
 
-Visual representation of the default keymap in keyboard-layout-editor: [KLE](http://www.keyboard-layout-editor.com/#/gists/13d0f7ae7a8b5835efcd23d61f50336a)
+Visual representation of the default keymap in keymap-drawer: [keymap-drawer.streamlit.app](https://caksoylar.github.io/keymap-drawer?keymap_yaml=H4sIAAAAAAAC_71WaXfSQBT93l8xnmpplTZl6YbHcwwhUCRAJKGbSwxkECRhMEuRg_jbncybhLRSG9Tjl3tf7sy8ebmzJNuoWlcUVG-hHrbJDA1G2LbQbOQPkYluTTvAyB6NMVp8dcbGGM97xHStEhpg1x15gjfDeLrc2kbERQvi-kNi2OacBH4JLbypPaLsuwHOIpfMvBIqZFGf2IEzofFRFvnDwOnRML8MU3gYo6HvT72SIHym8we9gz5xhL459sjcNl2Bzu6Y033LNWfYFXo26QmOOZoIDfm6KaqGpsrSgWNtQwFbvI4thO5W3ifuBBsu8U0fW7w1qlkRr9td3WCVG4VvR0YhTINdL0xj4YEZ2CzjPnrL8JKhzLDDUGd4zbDLsM6wzVBluKAziVk0pPPVuvVlrGmgiYq-0iqgSXpHWYlVELXzKu9ZY3ged3hzv0MoNtalUtbM-fJebTcMrxhKDC8Ylhm2GDYZZrIZxgcMhTijrEksp4OtkZl4YVWUZNYwMW9Xsi6WoTcJPLySO7LOZG_urMSypkLqSZBQKzK81yCYhCLNDquWyaQlpbZ7sRdFUhxdxdFNFHVhgUMLIQgNhij0P5lUElUNWmTeUGlfgn9d2Bqdeu1cT1tjvQXZzttN2IJqDVVaUcQzyq1KcszCn09xCQ3pIV8mdWourCn1EyqTw5dgS7Cpd7_3dQO__huZ1pc0JiWJbeXSBttJ0XaLe3tJsdypR-sVhnzB_sKolX7RVqLUYchTxzn_jWsP2RS5qeltmFcFanb1cJ_Sk8p9e8fTnXA-5XzG-cMGFUVBkfMR52POrx5wKuFqbHRs0yc-KMc5z7kA_D5teXAfZg65uJ_CRnrLcZcWvPcO5-fAu_C0TO9RCfgpPD2Dp48MX_yBOT942iecX3Pe5vw9dWXwKnA2jBRbi17r4E01lwc-AToFOoNdp0mdVtoSqrkccBHoCOgYNrIiNTY3qJo75AzESy1AcWJXk-mxl8VG2hJFfozYVxN-NsRyiuuLtpZW30v4htKtuPxFy63R8mu0whqtmFIrpJxjXS1RzWUdSUonCtXORRS2rvituOPNPcPFHvajs9MjxLeJaWH3YeXeoETCu9NEk9NfRaS3a3FcVuQ47mrlRxc02e_--CjvQwfh8U_UT6nvgYnZCwAA)
 
-This layout is heavily inspired from [Watchman 42-key layout](https://github.com/aroum/Watchman-layouts)
+This layout is heavily inspired by [Miryoku layout](https://github.com/manna-harbour/miryoku)
 
 ## FAQ
 
@@ -19,8 +19,8 @@ This layout is heavily inspired from [Watchman 42-key layout](https://github.com
 
 ### How to change the keymap?
 
-1. Fork or use this repository as a template https://github.com/ergonautkb/one-zmk-config.
-2. Enable Github Actions for your repository.
+1. Fork or use this repository as a template https://github.com/ergonautkb/one-s-zmk-config.
+2. Enable Github Actions for your repository if needed.
 
 You have two options on how to configure your desired keymap:
 
@@ -33,7 +33,7 @@ You have two options on how to configure your desired keymap:
 
 #### Option 2. Manual
 
-1. Make changes to the [ergonaut_one.keymap](config/boards/shields/ergonaut_one/ergonaut_one.keymap) file using your favorite text editor.
+1. Make changes to the [ergonaut_one.keymap](config/boards/shields/ergonaut_one_s/ergonaut_one_s.keymap) file using your favorite text editor.
 2. Commit changes to your repository.
 3. Go to `Actions` tab in your Github repository, locate the latest build and wait for it to complete.
 4. Grab the `firmware.zip` archive
@@ -41,7 +41,7 @@ You have two options on how to configure your desired keymap:
 ### How to flash the keyboard?
 
 1. Obtain `firmware.zip`
-2. Unzip `firmware.zip` - you should have `ergonaut_one_left-seeeduino_xiao_ble-zmk.uf2` and `ergonaut_one_right-seeeduino_xiao_ble-zmk.uf2` files
+2. Unzip `firmware.zip` - you should have `ergonaut_one_s_left-seeeduino_xiao_ble-zmk.uf2` and `ergonaut_one_s_right-seeeduino_xiao_ble-zmk.uf2` files
 3. Turn off the power for selected halve (move slider to position `OFF`)
 4. Connect selected halve to the PC via USB-C cable
 5. Press `RESET` button **twice** to enter DFU mode - you should see new USB device in your file manager
