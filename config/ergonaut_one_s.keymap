@@ -93,10 +93,10 @@
 
                 adj_layer {
                         bindings = <
-   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1 &bt BT_SEL 0
-   &bt BT_CLR    &bt BT_PRV    &bt BT_NXT    &sys_reset   &bootloader   &bootloader   &sys_reset    &bt BT_NXT    &bt BT_PRV   &bt BT_CLR
-   &out OUT_TOG  &out OUT_BLE  &out OUT_USB  &none        &none         &none         &none         &out OUT_USB  &out OUT_BLE &out OUT_TOG
-                               &none         &none        &none         &none         &none       &none
+   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1 &bt BT_SEL 0
+   &bt BT_CLR    &bt BT_PRV    &bt BT_NXT    &sys_reset   &bootloader    &bootloader    &sys_reset    &bt BT_NXT    &bt BT_PRV   &bt BT_CLR
+   &out OUT_TOG  &out OUT_BLE  &out OUT_USB  &none        &studio_unlock &studio_unlock &none         &out OUT_USB  &out OUT_BLE &out OUT_TOG
+                               &none         &none        &none          &none          &none       &none
                         >;
                 };
         };
