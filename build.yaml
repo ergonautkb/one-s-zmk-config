@@ -4,4 +4,14 @@ include:
   - board: seeeduino_xiao_ble
     shield: ergonaut_one_s_right
   - board: seeeduino_xiao_ble
+    shield: ergonaut_one_s_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: ergonaut_one_s_left_studio
+  - board: seeeduino_xiao_ble
+    shield: ergonaut_one_s_right
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: ergonaut_one_s_right_studio
+  - board: seeeduino_xiao_ble
     shield: settings_reset
