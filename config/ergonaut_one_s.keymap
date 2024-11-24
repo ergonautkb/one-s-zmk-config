@@ -29,6 +29,7 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
+                        display-name = "MAIN";
                         bindings = <
    &kp Q       &kp W       &kp E          &kp R          &kp T             &kp Y        &kp U         &kp I        &kp O       &kp P
    &hm LGUI A  &hm LALT S  &hm LCTRL D    &hm LSHFT F    &kp G             &kp H        &hm LSHFT J   &hm LCTRL K  &hm LALT L  &hm LGUI SEMI
@@ -38,6 +39,7 @@
                 };
 
                 nav_layer {
+                        display-name = "NAV";
                         bindings = <
    &none     &none         &none          &none          &none             &none          &kp LG(V)   &kp LG(C)    &kp LG(X)   &kp LG(Z)
    &kp LGUI  &kp LALT      &kp LCTRL      &kp LSHFT      &none             &kp CAPS       &kp LEFT    &kp DOWN     &kp UP      &kp RIGHT
@@ -47,6 +49,7 @@
                 };
 
                 mouse_layer {
+                        display-name = "MOUSE";
                         bindings = <
    &none       &none       &none          &none          &none             &none        &none         &none        &none       &none
    &kp LGUI    &kp LALT    &kp LCTRL      &kp LSHFT      &none             &none        &none         &none        &none       &none
@@ -56,6 +59,7 @@
                 };
 
                 media_layer {
+                        display-name = "MEDIA";
                         bindings = <
    &none       &none       &none          &none          &none             &kp LG(LS(N4))    &none         &kp C_BRI_DN  &kp C_BRI_UP  &none
    &kp LGUI    &kp LALT    &kp LCTRL      &kp LSHFT      &none             &none             &kp LSHFT     &kp C_VOL_DN  &kp C_VOL_UP  &kp LGUI
@@ -65,6 +69,7 @@
                 };
 
                 num_layer {
+                        display-name = "NUM";
                         bindings = <
    &kp LBKT    &kp N7      &kp N8         &kp N9         &kp RBKT          &none        &none         &none        &none       &none
    &kp SQT     &kp N4      &kp N5         &kp N6         &kp EQUAL         &none        &kp LSHFT     &kp LCTRL    &kp LALT    &kp LGUI
@@ -74,6 +79,7 @@
                 };
 
                 sym_layer {
+                        display-name = "SYM";
                         bindings = <
    &kp LBRC    &kp AMPS    &kp STAR       &kp LPAR       &kp RBRC          &none        &none         &none        &none       &none
    &kp COLON   &kp DLLR    &kp PRCNT      &kp CARET      &kp PLUS          &none        &kp LSHFT     &kp LCTRL    &kp LALT    &kp LGUI
@@ -83,6 +89,7 @@
                 };
 
                 fun_layer {
+                        display-name = "FUN";
                         bindings = <
    &kp F12     &kp F7      &kp F8         &kp F9         &kp PSCRN         &none        &none         &none        &none       &none
    &kp F11     &kp F4      &kp F5         &kp F6         &kp SLCK          &none        &kp LSHFT     &kp LCTRL    &kp LALT    &kp LGUI
@@ -92,6 +99,7 @@
                 };
 
                 adj_layer {
+                        display-name = "ADJ";
                         bindings = <
    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3 &bt BT_SEL 4   &bt BT_SEL 4   &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1 &bt BT_SEL 0
    &bt BT_CLR    &bt BT_PRV    &bt BT_NXT    &sys_reset   &bootloader    &bootloader    &sys_reset    &bt BT_NXT    &bt BT_PRV   &bt BT_CLR
